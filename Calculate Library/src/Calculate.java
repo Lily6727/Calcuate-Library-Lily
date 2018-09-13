@@ -41,6 +41,21 @@ public class Calculate {
 		return answer;
 	}
     public static String toMixedNum(int a, int b) {
-    	String answer = (a/b +"_" + (a-))
+    	String answer = (a/b) +"_" + ( a%b + "/" + b);
+    	return answer;
+    } 
+    public static String foil(int a, int b, int c, int d) {
+    	foil(a, b, c, d);
+    	String answer = (a*c)*n + (b*c - a*d)*n + -b*d;
+    	return answer;
+    }
+    public static boolean isDivisibleBy(int a, int b) {
+    	if(a > b) {
+    		System.out.println("true");
+    	}else {
+    		System.out.println("false");
+    	}
+    	boolean answer = true || false;
+    	return answer;
     }
 }
