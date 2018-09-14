@@ -44,18 +44,62 @@ public class Calculate {
     	String answer = (a/b) +"_" + ( a%b + "/" + b);
     	return answer;
     } 
-    public static String foil(int a, int b, int c, int d) {
-    	foil(a, b, c, d);
-    	String answer = (a*c)*n + (b*c - a*d)*n + -b*d;
+    public static String foil(int a, int b, int c, int d, String n) {
+        int coefficient1 = a*c;
+        int coefficient2 = a*d + b*c;
+        int coefficient3 = b*d;
+        String answer= (coefficient1 + n +"^2 + "+coefficient2 + n +"+" + coefficient3);
     	return answer;
     }
     public static boolean isDivisibleBy(int a, int b) {
-    	if(a > b) {
-    		System.out.println("true");
+    	if(a%b == 0) {
+            return true;
+    }else {
+    	return false;}
+    }  
+    public static double absValue(double a) {
+    	if(a > 0) {
+    		double answer = a;
+    		return answer;
     	}else {
-    		System.out.println("false");
+    		double answer = -a;
+    		return answer;
     	}
-    	boolean answer = true || false;
-    	return answer;
+  }
+    public static double max(double a, double b) {
+    	if(a>b) {
+    		double answer = a;
+    		return answer;	
+    	}else {
+    		double answer = b;
+    		return answer;
+    	}
+    }
+    public static double overloading1 (double a, double b, double c) {
+    	if(a>b && b>c) {
+    		double answer = a;
+    		return answer;
+    	}else if(b>c){
+    		double answer = b;
+    		return answer;
+    	}else if(b<c){
+    		double answer = c;
+    		return answer;
+    	}else {
+    		double answer = a;
+    		return answer;
+    	}
+    }
+    public static int min(int a, int b) {
+    	if(a<b) {
+    		int answer = a;
+    		return answer;
+    	}else {
+    		int answer = b;
+    		return answer;
+    	}
+    }
+    public static double round2(double a) {
+    	if() 
     }
 }
