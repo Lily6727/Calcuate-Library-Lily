@@ -100,6 +100,8 @@ public class Calculate {
     	}
     }
     public static double round2(double a) {
-    	if() 
+    	double answer = a * Math.round(2.0);
+    	return answer;
     }
+    
 }
