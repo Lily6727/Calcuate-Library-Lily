@@ -75,7 +75,7 @@ public class Calculate {
     		return answer;
     	}
     }
-    public static double overloading1 (double a, double b, double c) {
+    public static double max (double a, double b, double c) {
     	if(a>b && b>c) {
     		double answer = a;
     		return answer;
@@ -100,8 +100,56 @@ public class Calculate {
     	}
     }
     public static double round2(double a) {
-    	double answer = a * Math.round(2.0);
+        double coefficient3 = 100 * (a + 0.005);
+        double coefficient4 = (int) coefficient3;
+        double answer = coefficient4 / 100;
     	return answer;
     }
+    public static double exponent(double a, int b) {
+    	 double result = 1;
+    	 for(int c=1; c<=b; c++) {
+    		result = result * a;
+    	 }
+    		return result;
+    }
     
-}
+    public static int factorial(int a) {
+    	int result = a;
+    	for(int b=1; b<a; b++) {
+    		result = result*b;
+    	}
+    	return result;
+    }
+    public static boolean isPrime(int a) {
+    	 for(int b =2; b<a; b++) {
+    		 boolean c = isDivisibleBy(a,b);
+    		if(c == true) {
+    			return false;
+    		}
+    	 }
+    	 return true;
+    	}
+    public static int gcf(int a, int b) {
+    	int result = 1;
+    	for(int factor = 2; factor<a && factor<b; factor++){
+    	  boolean c = isDivisibleBy(a,factor);
+    	  boolean d = isDivisibleBy(b,factor);
+          if(c == true && d == true) {
+    		 result = factor;
+    	}
+    }
+    	return result;
+
+    }
+    public static double sqrt(double number) {
+    	double result = 1;
+    	for(double a = 1; number-result*result>=0.005 || result*result-number>=0.005; a++) {
+    		result = 0.5*(number/a+a);
+    	}
+    	
+    	return result;
+    }
+    		
+  }
+    	
+    
