@@ -143,11 +143,17 @@ public class Calculate {
     }
     public static double sqrt(double number) {
     	double result = 1;
-    	for(double a = 1; number-result*result>=0.005 || result*result-number>=0.005; a++) {
+    	for(double a = 1; number-result*result>=0.005 || result*result-number>=0.005; a+=0.001) {
     		result = 0.5*(number/a+a);
     	}
     	
     	return result;
+    }
+    public static String quadForm(int a, int b, int c){
+    	//pre:all roots are real
+    	//post: returns string
+    	double answer = discriminant(a, b, c);
+    	
     }
     		
   }

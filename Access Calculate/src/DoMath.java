@@ -26,7 +26,7 @@ public class DoMath {
        System.out.println(Calculate.factorial(25));
        System.out.println(Calculate.isPrime(5));
        System.out.println(Calculate.gcf(6, 9));
-       System.out.println(Calculate.sqrt(225));
+       System.out.println(Calculate.sqrt(5));
 	}
 
 }
