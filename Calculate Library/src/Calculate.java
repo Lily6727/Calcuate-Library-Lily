@@ -192,7 +192,7 @@ public class Calculate {
     	return result;
 
     }
-    // create a class, create a cup called "int" result = 1, for for loops, give an initial called int factor = 2, if factor<a && factor<b.
+    // create a class, create a cup called "integer" result = 1, for for loops, give an initial called integer factor = 2, if factor<a && factor<b.
     // then run boolean c and boolean d, if both of them are true, result = factor, then update, run again.
     
     public static double sqrt(double number) {
@@ -210,27 +210,68 @@ public class Calculate {
     // which is number - result*result>=0.005 ||result*result - number>=0.005, then use the law, double coefficient6 = 0.5*(number/a+a)
     //final do the round 2 to round the answer , then update and run again.
     
+    public static double min2(double a, double b) {
+    	if(a>b) {
+    		return a;
+    	}else {
+    		return b;
+    	}
+    }
     
     public static String quadForm(int a, int b, int c){
-    	//pre:it has real roots
-    	//post: returns roots
-    	String answer ="";
-    	if(discriminant(a,b,c)<0) {
-    		answer ="no real roots";
-    	}else if(discriminant(a,b,c) == 0) {
-    		answer = "round2(answer)";
-    	}else if((discriminant(a,b,c)>0)) {
-           int coefficient7 = min(answer,answer);
-           int coefficient8 = max(answer,answer);
-           double coefficient9 = round2(coefficient7);
-           double coefficient10 = round2(coefficient8);
-    		answer = "coefficient9"+"and" +"coefficient10";
+    	//part 4
+    	//uses the quadratic formula to approximate the real roots.
+    	if((discriminant(a,b,c)>=0)) {
+    		double d = round2((-b + sqrt(discriminant(a,b,c)))/-2/a);
+    		double e = round2((-b + sqrt(discriminant(a,b,c)))/-2/a);
+    		double rt1st;
+    		double rt2nd;
+    		if(d != e) {
+    			rt1st = min2(d,e);
+    		}else {
+    			rt1st = d;
+    		}
+    		if(rt1st == d) {
+    			rt2nd = e;
+    		}else {
+    			rt2nd = d;
+    		}
+    		String root1 = Double.toString(rt1st);
+    		String root2 = Double.toString(rt2nd);
+    		if(rt1st == rt2nd) {
+    			return root1;
+    		}else {
+    			return root1 + "and" + root2;
+    		}
+    	}else {
+    		return "no real roots.";
     	}
     	
-    	return answer;
-    	
     }
-    	
-  }
+    
+    public static int rangeOfNumbers(int a, int b){
+		if(a<b) {
+			while(a<b) {
+				System.out.println(a );
+				a++;
+			}
+			int answer = a;
+			return answer;
+		}else if(a>b){
+			while(a>b) {
+		      System.out.println(a );
+		      a--;
+		}
+			int answer = a;
+		return answer;
+	}else if(a == b) {
+		int answer = a;
+		return answer;
+	}
+		return a;
+	}
+    
+    //part5
+ }
     	
     
