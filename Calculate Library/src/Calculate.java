@@ -252,14 +252,14 @@ public class Calculate {
     public static int rangeOfNumbers(int a, int b){
 		if(a<b) {
 			while(a<b) {
-				System.out.println(a );
+				System.out.print(a+" ");
 				a++;
 			}
 			int answer = a;
 			return answer;
 		}else if(a>b){
 			while(a>b) {
-		      System.out.println(a );
+		      System.out.print(a+" " );
 		      a--;
 		}
 			int answer = a;
@@ -272,6 +272,7 @@ public class Calculate {
 	}
     
     //part5
+    
  }
     	
     
